@@ -1,0 +1,22 @@
+[package]
+name = "ferrograd"
+version = "0.1.0"
+edition = "2021"
+authors = ["ferrograd contributors"]
+description = "A zero-dependency deep-learning framework written in native Rust: a reverse-mode autograd engine with neural-network layers, optimizers, and losses."
+license = "MIT"
+repository = "https://github.com/lukas04545/new"
+readme = "README.md"
+keywords = ["machine-learning", "autograd", "neural-network", "deep-learning", "tensor"]
+categories = ["science", "mathematics"]
+
+[lib]
+name = "ferrograd"
+path = "src/lib.rs"
+
+# The whole point: no external dependencies. Pure std.
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
